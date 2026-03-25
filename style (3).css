@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+
+.topo {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.menu {
+  text-align: right;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+
+.banner {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.banner-texto {
+  flex: 1;
+}
+
+.banner-texto h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.banner-texto p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.banner-texto button {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.banner-imagem {
+  flex: 1;
+  text-align: right;
+}
+
+.banner-imagem img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.rodape {
+  background-color: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/*Media para desktop, aqui estamos ajustado o tamanho da tela do container para ficar igual, então quebrar em partes, aumentamos a fonte do h1 para ficar mais visível*/
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .banner-texto h1 {
+    font-size: 28px;
+  }
+
+/* ajustando o tamanho da fonte do banner */
+  .banner-texto p {
+    font-size: 16px;
+  }
+
+  /* Cards: 2 colunas */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+ 
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .menu {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  /* Banner em coluna */
+  .banner {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .banner-imagem {
+    text-align: center;
+  }
+
+  .banner-imagem img {
+    margin: 0 auto;
+  }
+
+  .banner-texto h1 {
+    font-size: 24px;
+  }
+
+  .banner-texto p {
+    font-size: 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  } 
+}
